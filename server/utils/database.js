@@ -7,7 +7,7 @@ const connectDB = async (index) => {
    const CREDENTIALS = JSON.parse(fs.readFileSync('credentials.json'))
 
    await doc.useServiceAccountAuth({
-      private_key: process.env.PRIVATE_KEY, //replace with key if .env fails to read
+      private_key: process.env.PRIVATE_KEY, //replace with private key if .env fails to read/load
       client_email: process.env.CLIENT_EMAIL
    })
 
